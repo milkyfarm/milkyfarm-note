@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ノート写真</title>
+
+  <!-- iPhone：ホーム画面のアイコンと名前 -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="ノート写真">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Android・Windows・パソコン用 -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <meta name="theme-color" content="#2f7a54">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #f2f6f9; }
+    iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+  </style>
+</head>
+<body>
+  <!-- ノート写真（GAS）の公開URL -->
+  <iframe id="app" src="https://script.google.com/macros/s/AKfycbweBFqQ_3hq_fmIR12lAtrToWwCSDW2U5SU87Ng6k-H3Xjf1cQrMA93jEJDOObam79j4A/exec?page=note"></iframe>
+  <script>
+    // ?tab=ask で開いたら「確認」を表示
+    var t = new URLSearchParams(location.search).get('tab');
+    if (t === 'ask') document.getElementById('app').src += '&tab=ask';
+  </script>
+</body>
+</html>
