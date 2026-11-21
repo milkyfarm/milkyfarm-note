@@ -1,7 +1,7 @@
 {
   "id": "/milkyfarm-note/",
-  "name": "ミルキーファーム ノート写真",
-  "short_name": "ノート写真",
+  "name": "ミルキーファーム 写真取込",
+  "short_name": "写真取込",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
